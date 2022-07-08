@@ -52,6 +52,28 @@
           </tr>
         </tbody>
       </table>
+      <h2>7日間分の投稿数</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <% (1..6).reverse_each do |i| %>
+              <th><%= "#{i}日前" %></th>
+            <% end %>
+            <th>今日</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @days_ago_6_book.count %></td>
+            <td><%= @days_ago_5_book.count %></td>
+            <td><%= @days_ago_4_book.count %></td>
+            <td><%= @days_ago_3_book.count %></td>
+            <td><%= @days_ago_2_book.count %></td>
+            <td><%= @yesterday_book.count %></td>
+            <td><%= @today_book.count %></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
